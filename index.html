@@ -1,14 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Luxbeton</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap"
+            rel="stylesheet" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
         <link rel="stylesheet" href="./css/main.min.css" />
     </head>
-    <body></body>
+    <body>
+        <!--! Header -->
+        <header class="page-header">
+            <div class="container">
+                <!-- Nav -->
+                <nav class="page-header__nav">
+                    <!-- Logo -->
+                    <a href="" class="logo">
+                        <img src="./images/logo.png" alt="" />
+                        Luxbeton
+                    </a>
+                    <!-- Site nav -->
+                    <ul class="site-nav">
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Главная</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Каталог</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Фотогалерея</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Акции</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">О компании</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Проекты</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <!-- Menu Button -->
+                    <button class="menu-button" type="button">
+                        <svg class="menu-button__icon" aria-label="Переключатель мобильного меню">
+                            <use
+                                class="menu-button__icon-menu"
+                                href="./images/icons/svg-sprite-optimized.svg#icon-cross"></use>
+                            <use
+                                class="menu-button__icon-cross"
+                                href="./images/icons/svg-sprite-optimized.svg#icon-menu"></use>
+                        </svg>
+                    </button>
+                </nav>
+
+                <div class="page-header__contacts">
+                    <!-- We are online -->
+                    <div class="message">
+                        <b class="message__action">Мы онлайн, пишите</b>
+                        <a class="message__link" href="" aria-label="Whatsapp">
+                            <svg class="message__icon">
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-whatsapp"></use>
+                            </svg>
+                        </a>
+                        <a class="message__link" href="" aria-label="Telegram">
+                            <svg class="message__icon">
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Company Phone number -->
+                    <a class="company-phone" href="tel:+380976666622">
+                        <svg class="company-phone__icon" width="33" height="33">
+                            <use href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
+                        </svg>
+                        +38 097 - 666 - 66 - 22
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!--! Hero -->
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero__title">
+                        Модульный <span class="excerpt excerpt--accent">барбекю комплекс</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        на основе натурального (полудрагоценного) камня от производителя за
+                        <span class="excerpt excerpt--accent">14 дней</span>
+                        с доставкой в любую точку РФ!
+                    </p>
+
+                    <!-- List -->
+                    <ul class="hero__descr-list">
+                        <li class="hero__descr-item">
+                            Изготовлен из 80%
+                            <span class="excerpt excerpt--bold">натурального камня</span> и 20%
+                            <span class="excerpt excerpt--bold">жаропрочного бетона</span>
+                        </li>
+                        <li class="hero__descr-item">
+                            Легко собрать самостоятельно
+                            <span class="excerpt excerpt--bold">за 30 минут!</span>
+                        </li>
+                        <li class="hero__descr-item">
+                            В <span class="excerpt excerpt--bold">3 раза дешевле</span> аналогичного
+                            комплекса из кирпича без потери качества
+                        </li>
+                        <li class="hero__descr-item">
+                            <span class="excerpt excerpt--bold">Гарантия</span> на все наши изделия
+                            - 1 год
+                        </li>
+                    </ul>
+
+                    <!-- Button -->
+                    <button class="button" type="button">РАСЧИТАТЬ СТОИМОСТЬ</button>
+                </div>
+            </section>
+
+            <!--! Features -->
+            <section class="features">
+                <div class="container">
+                    <!-- Features list -->
+                    <ul>
+                        <li>
+                            <div class="">
+                                <img
+                                    src="./images/features/perfect-barbecue-complex-290.jpg"
+                                    alt="Зона барбекю с дровами на брущатке" />
+                            </div>
+                            <p>
+                                Соберите свою
+                                <span class="excerpt excerpt--accent-secondary">
+                                    идеальную зону барбекю
+                                </span>
+                                из наших модулей
+                            </p>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img
+                                    src="./images/features/no-foundation-barbecue-complex-290.jpg"
+                                    alt="Зона барбекю на земле, на частном участке" />
+                            </div>
+                            <p>
+                                Не нужен отдельный фундамент,
+                                <span class="excerpt excerpt--accent-secondary">
+                                    достаточно ровной площадки
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img
+                                    src="./images/features/stylish-barbecue-complex-290.jpg"
+                                    alt="Зона барбекю перед входом в дом" />
+                            </div>
+                            <p>
+                                <span class="excerpt excerpt--accent-secondary">
+                                    Стильные и экологичные
+                                </span>
+                                печи-барбекю
+                            </p>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img
+                                    src="./images/features/winter-barbecue-complex-290.jpg"
+                                    alt="Зона барбекю перед входом в дом" />
+                            </div>
+                            <p>
+                                <span class="excerpt excerpt--accent-secondary">
+                                    Морозостойки
+                                </span>
+                                - проверено Сибиряками
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- Buttons -->
+                    <div>
+                        <button type="button">
+                            <svg>
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-call-incoming"></use>
+                            </svg>
+                            Перезвоните мне
+                        </button>
+                        <button type="button">
+                            <svg>
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-calculator"></use>
+                            </svg>
+                            Расчитать стоимость
+                        </button>
+                        <a href="" download>
+                            <svg>
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-generate-pdf"></use>
+                            </svg>
+                            Скачайте каталог
+                        </a>
+                        <button type="button">
+                            <svg>
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-arrow-in-up"></use>
+                            </svg>
+                            Наверх
+                        </button>
+                        <button type="button">
+                            <svg aria-label="Переключатель дополнительной панели кнопок">
+                                <use
+                                    href="./images/icons/svg-sprite-optimized.svg#icon-arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--! Catalog -->
+            <section class="catalog">
+                <div class="container">
+                    <h2 class="section-title section-title--light">каталог</h2>
+
+                    <!-- Catlog list -->
+                    <ul>
+                        <li>
+                            <div>
+                                <img
+                                    src="./images/catalog/concrete-barbecue-complex-290.jpg"
+                                    alt="Барбекю-комплекс на плитке" />
+                            </div>
+                            <h3>Барбекю-комплекс из бетона и полудрагаценного камня</h3>
+                        </li>
+                        <li>
+                            <div>
+                                <img
+                                    src="./images/catalog/italy-barbecue-complex-290.jpg"
+                                    alt="????" />
+                            </div>
+                            <h3>Барбекю-комплекс "Итальянские технологии"</h3>
+                        </li>
+                        <li>
+                            <div>
+                                <img
+                                    src="./images/catalog/maf-290.jpg"
+                                    alt="????" />
+                            </div>
+                            <h3>МАФ</h3>
+                        </li>
+                        <li>
+                            <div>
+                                <img
+                                    src="./images/catalog/tile-290.jpg"
+                                    alt="????" />
+                            </div>
+                            <h3>Плитка</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
