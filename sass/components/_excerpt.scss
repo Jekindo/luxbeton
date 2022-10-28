@@ -1,0 +1,13 @@
+.excerpt {
+	&--accent {
+		color: get-color('accent');
+	}
+
+	&--accent-secondary {
+		color: get-color('secondary-accent');
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+}

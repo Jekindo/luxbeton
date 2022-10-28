@@ -2,6 +2,7 @@ $colors: (
 	'primary-black': #000,
 	'primary-white': #fff,
 	'page-bg': #232323,
+	'mobile-menu-bg': #151515,
 	'form-bg': #272727,
 	'accent': #FF9900,
 	'secondary-accent':#FF6712,
@@ -13,3 +14,10 @@ $colors: (
 );
 
 $grid-gap: 20px;
+
+$mobile: 480px;
+$tablet: 640px;
+$tablet-big: 960px;
+$desktop: 1200px;
+
+$transition-duration: 250ms;

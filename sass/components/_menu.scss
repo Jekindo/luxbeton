@@ -1,0 +1,56 @@
+.menu-button {
+    padding: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    @media screen and (min-width: $tablet-big) {
+        display: none;
+    }
+
+    &--open {
+        .menu-button__icon-cross {
+            display: block;
+        }
+
+        .menu-button__icon-menu {
+            display: none;
+        }
+    }
+
+    &__icon-cross {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    @media screen and (max-width: 959px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(calc(-100% - 116px));
+
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        background-color: get-color("mobile-menu-bg");
+        text-align: center;
+
+        transition: transform $transition-duration ease-in-out;
+
+        &--open {
+            transform: translateY(0);
+        }
+    }
+
+	@media screen and (min-width: $desktop) {
+		@include aligned-flex;
+		column-gap: 25px;
+	}
+
+	@media screen and (min-width: 1330px) {
+		column-gap: 50px;
+	}
+}

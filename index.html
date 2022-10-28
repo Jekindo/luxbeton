@@ -21,73 +21,91 @@
                 <nav class="page-header__nav">
                     <!-- Logo -->
                     <a href="" class="logo">
-                        <img src="./images/logo.png" alt="" />
+                        <img
+                            class="logo__image"
+                            srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+                            src="./images/logo.png"
+                            alt="" />
                         Luxbeton
                     </a>
-                    <!-- Site nav -->
-                    <ul class="site-nav">
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">Главная</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">Каталог</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">Фотогалерея</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">Акции</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">О компании</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">Проекты</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="" class="site-nav__link">Контакты</a>
-                        </li>
-                    </ul>
 
                     <!-- Menu Button -->
-                    <button class="menu-button" type="button">
-                        <svg class="menu-button__icon" aria-label="Переключатель мобильного меню">
-                            <use
-                                class="menu-button__icon-menu"
-                                href="./images/icons/svg-sprite-optimized.svg#icon-cross"></use>
+                    <button class="menu-button" type="button" data-menu-button>
+                        <svg
+                            class="menu-button__icon"
+                            aria-label="Переключатель мобильного меню"
+                            aria-expanded="false"
+                            aria-controls="mobile-menu"
+                            width="40"
+                            height="30">
                             <use
                                 class="menu-button__icon-cross"
+                                href="./images/icons/svg-sprite-optimized.svg#icon-cross"></use>
+                            <use
+                                class="menu-button__icon-menu"
                                 href="./images/icons/svg-sprite-optimized.svg#icon-menu"></use>
                         </svg>
                     </button>
-                </nav>
 
-                <div class="page-header__contacts">
-                    <!-- We are online -->
-                    <div class="message">
-                        <b class="message__action">Мы онлайн, пишите</b>
-                        <a class="message__link" href="" aria-label="Whatsapp">
-                            <svg class="message__icon">
-                                <use
-                                    href="./images/icons/svg-sprite-optimized.svg#icon-whatsapp"></use>
-                            </svg>
-                        </a>
-                        <a class="message__link" href="" aria-label="Telegram">
-                            <svg class="message__icon">
-                                <use
-                                    href="./images/icons/svg-sprite-optimized.svg#icon-telegram"></use>
-                            </svg>
-                        </a>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu" data-menu id="mobile-menu">
+                        <!-- Site nav -->
+                        <ul class="site-nav">
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">Главная</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">Каталог</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">Фотогалерея</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">Акции</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">О компании</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">Проекты</a>
+                            </li>
+                            <li class="site-nav__item">
+                                <a href="" class="site-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+
+                        <div class="page-header__contacts">
+                            <!-- We are online -->
+                            <div class="message">
+                                <b class="message__action">Мы онлайн, пишите</b>
+                                <a class="message__link" href="" aria-label="Whatsapp">
+                                    <svg class="message__icon">
+                                        <use
+                                            href="./images/icons/svg-sprite-optimized.svg#icon-whatsapp"></use>
+                                    </svg>
+                                </a>
+                                <a class="message__link" href="" aria-label="Telegram">
+                                    <svg class="message__icon">
+                                        <use
+                                            href="./images/icons/svg-sprite-optimized.svg#icon-telegram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Company Phone number -->
+                            <a class="company-phone" href="tel:+380976666622">
+                                <svg
+                                    class="company-phone__icon"
+                                    width="33"
+                                    height="33">
+                                    <use
+                                        href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
+                                </svg>
+                                097 - 666 - 66 - 22
+                            </a>
+                        </div>
                     </div>
-
-                    <!-- Company Phone number -->
-                    <a class="company-phone" href="tel:+380976666622">
-                        <svg class="company-phone__icon" width="33" height="33">
-                            <use href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
-                        </svg>
-                        +38 097 - 666 - 66 - 22
-                    </a>
-                </div>
+                </nav>
             </div>
         </header>
 
@@ -237,7 +255,7 @@
             <!--! Catalog -->
             <section class="catalog">
                 <div class="container">
-                    <h2 class="section-title section-title--light">каталог</h2>
+                    <h2 class="section-title section-title--light"><span class="section-title__frame">каталог</span></h2>
 
                     <!-- Catlog list -->
                     <ul class="catalog__list">
@@ -285,8 +303,10 @@
             <section class="advantages">
                 <div class="container">
                     <h2 class="section-title section-title--dark advantages__section-title">
-                        Чем наши барбекю комплексы
-                        <span class="excerpt excerpt--accent">лучше</span>
+                        <span class="section-title__frame">
+							Чем наши барбекю комплексы
+							<span class="excerpt excerpt--accent">лучше</span>
+						</span>
                     </h2>
                     <!-- List -->
                     <ul class="advantages__list">
@@ -364,17 +384,20 @@
             <section class="gallery">
                 <div class="container">
                     <h2 class="section-title section-title--dark gallery__section-title">
-                        готовые комплексы барбекю
+                        <span class="section-title__frame">готовые комплексы барбекю</span>
                     </h2>
+					Слайдер...
                 </div>
             </section>
 
             <!--! Design -->
             <section class="design">
                 <div class="container">
-                    <h2 class="section-title section-title--accent design__section-title">
-                        Создай <span class="excerpt excerpt--accent">уникальный дизайн</span> своего
-                        участка
+                    <h2 class="section-title design__section-title">
+                        <span class="section-title__frame">
+							Создай <span class="excerpt excerpt--accent">уникальный дизайн</span> своего
+							участка
+						</span>
                     </h2>
                     <p class="design__text"></p>
                     <a class="button" href="">пройти тест</a>
@@ -385,7 +408,7 @@
             <section class="work">
                 <div class="container">
                     <h2 class="section-title section-title--light work__section-title">
-                        КАК МЫ РАБОТАЕМ
+                        <span class="section-title__frame">КАК МЫ РАБОТАЕМ</span>
                     </h2>
                     <p class="work__text">
                         Уже через 14 дней барбекю комплекс будет у Вас с инструкцией по сборке и
@@ -464,7 +487,7 @@
             <section>
                 <div class="container">
                     <h2 class="section-title section-title--dark">
-                        Получите примеры комплекса в нужном цвете прямо на WhatsApp!
+                        <span class="section-title__frame">Получите примеры комплекса в нужном цвете прямо на WhatsApp!</span>
                     </h2>
                     <div class="">
                         <img src="./images/form/catalog-book-290.png" alt="Журнал-каталог" />
@@ -491,9 +514,11 @@
             <section class="stock">
                 <div class="container">
                     <h2 class="section-title section-title--light">
-                        <span class="excerpt excerpt--accent">Акция!</span> <br />
-                        при заказе комплекса барбекю -
-                        <span class="excerpt excerpt--accent">ваза в цвет комплекса в подарок</span>
+                        <span class="section-title__frame">
+							<span class="excerpt excerpt--accent">Акция!</span> <br />
+							при заказе комплекса барбекю -
+							<span class="excerpt excerpt--accent">ваза в цвет комплекса в подарок</span>
+						</span>
                     </h2>
                     <ul class="stock__list">
                         <li class="stock__item">
@@ -604,5 +629,7 @@
                 </div>
             </footer>
         </main>
+
+        <script src="./js/menu.js"></script>
     </body>
 </html>

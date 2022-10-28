@@ -1,5 +1,16 @@
-@mixin font($weight, $size, $height) {
+@mixin font($weight, $size, $height: inherit) {
 	font-weight: $weight;
 	font-size: $size;
 	line-height: $height;
+}
+
+@mixin centered-flex($type: flex, $cross-axis: center, $main-axis: center) {
+	display: $type;
+	align-items: $cross-axis;
+	justify-content: $main-axis;
+}
+
+@mixin aligned-flex($type: flex) {
+	display: $type;
+	align-items: center;
 }
