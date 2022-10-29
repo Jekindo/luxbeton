@@ -29,7 +29,8 @@
         position: absolute;
         top: 100%;
         left: 0;
-        transform: translateY(calc(-100% - 116px));
+        transform: scaleY(0);
+		transform-origin: top center;
 
         width: 100%;
         padding-top: 40px;
@@ -41,7 +42,7 @@
         transition: transform $transition-duration ease-in-out;
 
         &--open {
-            transform: translateY(0);
+            transform: scaleY(1);
         }
     }
 
