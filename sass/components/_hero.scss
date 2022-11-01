@@ -1,0 +1,147 @@
+.hero {
+    padding-top: 120px;
+
+    background-color: #151515;
+    background-image: linear-gradient(90deg, #151515 0%, rgba(0, 0, 0, 0) 18.99%),
+        linear-gradient(270deg, #151515 0%, rgba(0, 0, 0, 0) 17.36%),
+        linear-gradient(0deg, rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.8)),
+        url(../images/hero/hero-bg-mobile.jpg);
+
+    // background-image: url(../images/hero/hero-image.png);
+    // background-image: url(../images/hero/hero-bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    // background-size: auto 100%;
+    background-position: top right;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 150px;
+        padding-bottom: 130px;
+
+        background-image: linear-gradient(90deg, #151515 0%, rgba(0, 0, 0, 0) 18.99%),
+            linear-gradient(270deg, #151515 0%, rgba(0, 0, 0, 0) 17.36%),
+            linear-gradient(0deg, rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.8)),
+            url(../images/hero/hero-bg-desktop.jpg) blur(2px);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left 15%;
+        // background-image: url(../images/hero/hero-bg.jpg);
+    }
+
+	&__inner {
+		max-width: 750px;
+	}
+
+    &__subtitle {
+        // padding-bottom: 300px;
+        // padding-left: 10px;
+        position: relative;
+        @include font(inherit, 26px, 1.08);
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &__top {
+    }
+
+    &__descr-list {
+        @extend %list;
+        margin-bottom: 30px;
+
+	    @media screen and (min-width: $desktop) {
+			margin-bottom: 50px;
+		}
+    }
+}
+
+.hero__title {
+    position: relative;
+
+    display: inline-block;
+    padding: 15px;
+
+    @include font(700, 40px, 1.1);
+    text-transform: uppercase;
+
+    &::before,
+    &::after,
+    &-frame::before,
+    &-frame::after {
+        content: "";
+
+        position: absolute;
+        width: 30px;
+        height: 30px;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+
+        border-top: 3px solid get-color("accent");
+        border-left: 3px solid get-color("accent");
+    }
+
+    &::after {
+        top: 0;
+        right: 0;
+
+        border-top: 3px solid get-color("accent");
+        border-right: 3px solid get-color("accent");
+    }
+
+    &-frame {
+        &::before {
+            bottom: 0;
+            left: 0;
+
+            border-bottom: 3px solid get-color("accent");
+            border-left: 3px solid get-color("accent");
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+
+            border-bottom: 3px solid get-color("accent");
+            border-right: 3px solid get-color("accent");
+        }
+    }
+}
+
+.hero__descr-item {
+    position: relative;
+
+    padding-left: 60px;
+
+    color: get-color("primary-black");
+    font-size: 17px;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 60px;
+        height: 50px;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+$list-images: "rock", "clock", "money", "varanty";
+@include list-marker(image, $list-images, ".hero__descr-item", hero, ".png");

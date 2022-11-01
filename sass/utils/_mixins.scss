@@ -14,3 +14,22 @@
 	display: $type;
 	align-items: center;
 }
+
+@mixin flex-grid($gap) {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: $gap;
+}
+
+@mixin list-marker($var, $list, $base-selector, $folder, $format) {
+	@each $var in $list {
+		$idx: index($list, $var);
+	
+		#{$base-selector}:nth-child(#{$idx})::before {
+			background-image: image-set(
+				url(../images/#{$folder}/#{$var}#{$format}) 1x,
+				url(../images/#{$folder}/#{$var}@2x#{$format}) 2x
+			);
+		}
+	}
+}

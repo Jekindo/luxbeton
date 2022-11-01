@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Luxbeton</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;700&display=swap"
             rel="stylesheet" />
         <link
             rel="stylesheet"
@@ -94,10 +94,7 @@
 
                             <!-- Company Phone number -->
                             <a class="company-phone" href="tel:+380976666622">
-                                <svg
-                                    class="company-phone__icon"
-                                    width="33"
-                                    height="33">
+                                <svg class="company-phone__icon" width="33" height="33">
                                     <use
                                         href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
                                 </svg>
@@ -113,52 +110,82 @@
             <!--! Hero -->
             <section class="hero">
                 <div class="container">
-                    <h1 class="hero__title">
-                        Модульный <span class="excerpt excerpt--accent">барбекю комплекс</span>
-                    </h1>
-                    <p class="hero__subtitle">
-                        на основе натурального (полудрагоценного) камня от производителя за
-                        <span class="excerpt excerpt--accent">14 дней</span>
-                        с доставкой в любую точку РФ!
-                    </p>
-
-                    <!-- List -->
-                    <ul class="hero__descr-list">
-                        <li class="hero__descr-item">
-                            Изготовлен из 80%
-                            <span class="excerpt excerpt--bold">натурального камня</span> и 20%
-                            <span class="excerpt excerpt--bold">жаропрочного бетона</span>
-                        </li>
-                        <li class="hero__descr-item">
-                            Легко собрать самостоятельно
-                            <span class="excerpt excerpt--bold">за 30 минут!</span>
-                        </li>
-                        <li class="hero__descr-item">
-                            В <span class="excerpt excerpt--bold">3 раза дешевле</span> аналогичного
-                            комплекса из кирпича без потери качества
-                        </li>
-                        <li class="hero__descr-item">
-                            <span class="excerpt excerpt--bold">Гарантия</span> на все наши изделия
-                            - 1 год
-                        </li>
-                    </ul>
-
-                    <!-- Button -->
-                    <button class="button" type="button">РАСЧИТАТЬ СТОИМОСТЬ</button>
+                    <div class="hero__inner">
+                        <h1 class="hero__title">
+                            <span class="hero__title-frame"
+                                >Модульный
+                                <span class="excerpt excerpt--accent">барбекю комплекс</span>
+                            </span>
+                        </h1>
+                        <p class="hero__subtitle">
+                            <span class="hero__subtitle-frame">
+                                на основе натурального (полудрагоценного) камня от производителя за
+                                <span class="excerpt excerpt--accent">14 дней</span>
+                                с доставкой в любую точку РФ!
+                            </span>
+                            <!-- <img class="hero__image" src="./images/hero/hero-image.png" alt=""> -->
+                        </p>
+                        <!-- <img src="./images/hero/sparks.png" alt=""> -->
+                        <!-- List -->
+                        <ul class="hero__descr-list">
+                            <li class="hero__descr-item">
+                                Изготовлен из 80%
+                                <span class="excerpt excerpt--bold">натурального камня</span> и 20%
+                                <span class="excerpt excerpt--bold">жаропрочного бетона</span>
+                            </li>
+                            <li class="hero__descr-item">
+                                Легко собрать самостоятельно
+                                <span class="excerpt excerpt--bold">за 30 минут!</span>
+                            </li>
+                            <li class="hero__descr-item">
+                                В
+                                <span class="excerpt excerpt--bold">3 раза дешевле</span>
+                                аналогичного комплекса из кирпича без потери качества
+                            </li>
+                            <li class="hero__descr-item">
+                                <span class="excerpt excerpt--bold">Гарантия</span> на все наши
+                                изделия - 1 год
+                            </li>
+                        </ul>
+                        <!-- Button -->
+                        <button class="button" type="button">РАСЧИТАТЬ СТОИМОСТЬ</button>
+                    </div>
                 </div>
             </section>
 
             <!--! Features -->
-            <section class="features">
-                <div class="container">
+            <section class="features section">
+                <div class="container section__container">
+                    <h2 class="visually-hidden">Особенности</h2>
+
                     <!-- Features list -->
                     <ul class="features__list">
                         <li class="features__item">
                             <div class="features__thumb">
-                                <img
-                                    class="features__image"
-                                    src="./images/features/perfect-barbecue-complex-290.jpg"
-                                    alt="Зона барбекю с дровами на брущатке" />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/features/perfect-barbecue-complex-310.webp   320w,
+                                            ./images/features/perfect-barbecue-complex-620.webp   620w,
+                                            ./images/features/perfect-barbecue-complex-930.webp   930w,
+                                            ./images/features/perfect-barbecue-complex-1240.webp 1240w,
+                                            ./images/features/perfect-barbecue-complex-1860.webp 1860w
+                                        "
+                                        type="image/webp"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                    <img
+                                        class="features__image"
+                                        srcset="
+                                            ./images/features/perfect-barbecue-complex-310.jpg   320w,
+                                            ./images/features/perfect-barbecue-complex-620.jpg   620w,
+                                            ./images/features/perfect-barbecue-complex-930.jpg   930w,
+                                            ./images/features/perfect-barbecue-complex-1240.jpg 1240w,
+                                            ./images/features/perfect-barbecue-complex-1860.jpg 1860w
+                                        "
+                                        src="./images/features/perfect-barbecue-complex-310.jpg"
+                                        alt="Зона барбекю с дровами на брущатке"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                </picture>
                             </div>
                             <p class="features__descr">
                                 Соберите свою
@@ -170,10 +197,30 @@
                         </li>
                         <li class="features__item">
                             <div class="features__thumb">
-                                <img
-                                    class="features__image"
-                                    src="./images/features/no-foundation-barbecue-complex-290.jpg"
-                                    alt="Зона барбекю на земле, на частном участке" />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/features/no-foundation-barbecue-complex-310.webp   320w,
+                                            ./images/features/no-foundation-barbecue-complex-620.webp   620w,
+                                            ./images/features/no-foundation-barbecue-complex-930.webp   930w,
+                                            ./images/features/no-foundation-barbecue-complex-1240.webp 1240w,
+                                            ./images/features/no-foundation-barbecue-complex-1860.webp 1860w
+                                        "
+                                        type="image/webp"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                    <img
+                                        class="features__image"
+                                        srcset="
+                                            ./images/features/no-foundation-barbecue-complex-310.jpg   320w,
+                                            ./images/features/no-foundation-barbecue-complex-620.jpg   620w,
+                                            ./images/features/no-foundation-barbecue-complex-930.jpg   930w,
+                                            ./images/features/no-foundation-barbecue-complex-1240.jpg 1240w,
+                                            ./images/features/no-foundation-barbecue-complex-1860.jpg 1860w
+                                        "
+                                        src="./images/features/perfect-barbecue-complex-310.jpg"
+                                        alt="Зона барбекю с дровами на брущатке"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                </picture>
                             </div>
                             <p class="features__descr">
                                 Не нужен отдельный фундамент,
@@ -184,10 +231,30 @@
                         </li>
                         <li class="features__item">
                             <div class="features__thumb">
-                                <img
-                                    class="features__image"
-                                    src="./images/features/stylish-barbecue-complex-290.jpg"
-                                    alt="Зона барбекю перед входом в дом" />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/features/stylish-barbecue-complex-310.webp   320w,
+                                            ./images/features/stylish-barbecue-complex-620.webp   620w,
+                                            ./images/features/stylish-barbecue-complex-930.webp   930w,
+                                            ./images/features/stylish-barbecue-complex-1240.webp 1240w,
+                                            ./images/features/stylish-barbecue-complex-1860.webp 1860w
+                                        "
+                                        type="image/webp"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                    <img
+                                        class="features__image"
+                                        srcset="
+                                            ./images/features/stylish-barbecue-complex-310.jpg   320w,
+                                            ./images/features/stylish-barbecue-complex-620.jpg   620w,
+                                            ./images/features/stylish-barbecue-complex-930.jpg   930w,
+                                            ./images/features/stylish-barbecue-complex-1240.jpg 1240w,
+                                            ./images/features/stylish-barbecue-complex-1860.jpg 1860w
+                                        "
+                                        src="./images/features/perfect-barbecue-complex-310.jpg"
+                                        alt="Зона барбекю на частном участке"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                </picture>
                             </div>
                             <p class="features__descr">
                                 <span class="excerpt excerpt--accent-secondary">
@@ -198,10 +265,30 @@
                         </li>
                         <li class="features__item">
                             <div class="features__thumb">
-                                <img
-                                    class="features__image"
-                                    src="./images/features/winter-barbecue-complex-290.jpg"
-                                    alt="Зона барбекю перед входом в дом" />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/features/winter-barbecue-complex-310.webp   320w,
+                                            ./images/features/winter-barbecue-complex-620.webp   620w,
+                                            ./images/features/winter-barbecue-complex-930.webp   930w,
+                                            ./images/features/winter-barbecue-complex-1240.webp 1240w,
+                                            ./images/features/winter-barbecue-complex-1860.webp 1860w
+                                        "
+                                        type="image/webp"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                    <img
+                                        class="features__image"
+                                        srcset="
+                                            ./images/features/winter-barbecue-complex-310.jpg   320w,
+                                            ./images/features/winter-barbecue-complex-620.jpg   620w,
+                                            ./images/features/winter-barbecue-complex-930.jpg   930w,
+                                            ./images/features/winter-barbecue-complex-1240.jpg 1240w,
+                                            ./images/features/winter-barbecue-complex-1860.jpg 1860w
+                                        "
+                                        src="./images/features/perfect-barbecue-complex-310.jpg"
+                                        alt="Зона барбекю перед входом в дом"
+                                        sizes="(min-width: 768px) 50vw, 100vw" />
+                                </picture>
                             </div>
                             <p class="features__descr">
                                 <span class="excerpt excerpt--accent-secondary">
@@ -243,7 +330,9 @@
                             Наверх
                         </button>
                         <button class="control-menu__button-switch" type="button">
-                            <svg aria-label="Переключатель дополнительного меню с кнопками">
+                            <svg
+                                class="control-menu__icon-arrow"
+                                aria-label="Переключатель дополнительного меню с кнопками">
                                 <use
                                     href="./images/icons/svg-sprite-optimized.svg#icon-arrow-right"></use>
                             </svg>
@@ -253,47 +342,143 @@
             </section>
 
             <!--! Catalog -->
-            <section class="catalog">
-                <div class="container">
-                    <h2 class="section-title section-title--light"><span class="section-title__frame">каталог</span></h2>
+            <section class="catalog section section--clouds-bg">
+                <div class="container section__container">
+                    <div class="title-wrapper">
+						<h2 class="section-title section-title--light section__section-title">
+							<span class="section-title__frame">каталог</span>
+						</h2>
+					</div>
 
                     <!-- Catlog list -->
                     <ul class="catalog__list">
-                        <li class="catalog__item">
-                            <div class="catalog__thumb">
-                                <img
-                                    src="./images/catalog/concrete-barbecue-complex-290.jpg"
-                                    alt="Барбекю-комплекс на плитке" />
-                            </div>
-                            <h3 class="catalog__category">
-                                Барбекю-комплекс из бетона и полудрагаценного камня
-                            </h3>
+                        <li class="catalog__item catalog__item--accent">
+                            <a href="" class="catalog__link">
+                                <div class="catalog__thumb">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/catalog/concrete-barbecue-complex-320.webp   320w,
+                                                ./images/catalog/concrete-barbecue-complex-640.webp   640w,
+                                                ./images/catalog/concrete-barbecue-complex-960.webp   960w,
+                                                ./images/catalog/concrete-barbecue-complex-1280.webp 1280w,
+                                                ./images/catalog/concrete-barbecue-complex-1920.webp 1920w
+                                            "
+                                            type="image/webp"
+                                            sizes="(min-width: 768px) 50vw, 100vw" />
+                                        <img
+                                            class="catalog__image"
+                                            srcset="
+                                                ./images/catalog/concrete-barbecue-complex-320.jpg   320w,
+                                                ./images/catalog/concrete-barbecue-complex-640.jpg   640w,
+                                                ./images/catalog/concrete-barbecue-complex-960.jpg   960w,
+                                                ./images/catalog/concrete-barbecue-complex-1280.jpg 1280w,
+                                                ./images/catalog/concrete-barbecue-complex-1920.jpg 1920w
+                                            "
+                                            src="./images/catalog/concrete-barbecue-complex-320.jpg"
+                                            alt="Большая барбекю-зона на плитке"
+                                            sizes="(min-width: 768px) 50vw, 100vw" />
+                                    </picture>
+                                </div>
+                                <h3 class="catalog__category">
+                                    Барбекю-комплекс из бетона и полудрагаценного камня
+                                </h3>
+                            </a>
                         </li>
                         <li class="catalog__item">
-                            <div class="catalog__thumb">
-                                <img
-                                    src="./images/catalog/italy-barbecue-complex-290.jpg"
-                                    alt="Белый барбекю-комплекс на траве, на частном участке" />
-                            </div>
-                            <h3 class="catalog__category">
-                                Барбекю-комплекс "Итальянские технологии"
-                            </h3>
+                            <a href="" class="catalog__link">
+								<div class="catalog__thumb">
+									<picture>
+										<source
+											srcset="
+												./images/catalog/italy-barbecue-complex-320.webp   320w,
+												./images/catalog/italy-barbecue-complex-640.webp   640w,
+												./images/catalog/italy-barbecue-complex-960.webp   960w,
+												./images/catalog/italy-barbecue-complex-1280.webp 1280w,
+												./images/catalog/italy-barbecue-complex-1920.webp 1920w
+											"
+											type="image/webp"
+											sizes="(min-width: 768px) 50vw, 100vw" />
+										<img
+											class="catalog__image"
+											srcset="
+												./images/catalog/italy-barbecue-complex-320.jpg   320w,
+												./images/catalog/italy-barbecue-complex-640.jpg   640w,
+												./images/catalog/italy-barbecue-complex-960.jpg   960w,
+												./images/catalog/italy-barbecue-complex-1280.jpg 1280w,
+												./images/catalog/italy-barbecue-complex-1920.jpg 1920w
+											"
+											src=" ./images/catalog/italy-barbecue-complex-320.jpg"
+											alt="Белый барбекю-комплекс на траве, на частном участке"
+											sizes="(min-width: 768px) 50vw, 100vw" />
+									</picture>
+								</div>
+								<h3 class="catalog__category">
+									Барбекю-комплекс "Итальянские технологии"
+								</h3>
+							</a>
                         </li>
                         <li class="catalog__item">
-                            <div class="catalog__thumb">
-                                <img
-                                    src="./images/catalog/maf-290.jpg"
-                                    alt="Темный гранитный вазон с декоративным деревом внутри" />
-                            </div>
-                            <h3 class="catalog__category">МАФ</h3>
+                            <a href="" class="catalog__link">
+								<div class="catalog__thumb">
+									<picture>
+										<source
+											srcset="
+												./images/catalog/maf-320.webp   320w,
+												./images/catalog/maf-640.webp   640w,
+												./images/catalog/maf-960.webp   960w,
+												./images/catalog/maf-1280.webp 1280w,
+												./images/catalog/maf-1920.webp 1920w
+											"
+											type="image/webp"
+											sizes="(min-width: 768px) 50vw, 100vw" />
+										<img
+											class="catalog__image"
+											srcset="
+												./images/catalog/maf-320.jpg   320w,
+												./images/catalog/maf-640.jpg   640w,
+												./images/catalog/maf-960.jpg   960w,
+												./images/catalog/maf-1280.jpg 1280w,
+												./images/catalog/maf-1920.jpg 1920w
+											"
+											src="./images/catalog/maf-320.jpg"
+											alt="Темный гранитный вазон с декоративным деревом внутри"
+											sizes="(min-width: 768px) 50vw, 100vw" />
+									</picture>
+								</div>
+								<h3 class="catalog__category">МАФ</h3>
+							</a>
                         </li>
                         <li class="catalog__item">
-                            <div class="catalog__thumb">
-                                <img
-                                    src="./images/catalog/tile-290.jpg"
-                                    alt="Уложенная на земле плитка" />
-                            </div>
-                            <h3 class="catalog__category">Плитка</h3>
+                            <a href="" class="catalog__link">
+								<div class="catalog__thumb">
+									<picture>
+										<source
+											srcset="
+												./images/catalog/tile-320.webp   320w,
+												./images/catalog/tile-640.webp   640w,
+												./images/catalog/tile-960.webp   960w,
+												./images/catalog/tile-1280.webp 1280w,
+												./images/catalog/tile-1920.webp 1920w
+											"
+											type="image/webp"
+											sizes="(min-width: 768px) 50vw, 100vw" />
+										<img
+											class="catalog__image"
+											srcset="
+												./images/catalog/tile-320.jpg   320w,
+												./images/catalog/tile-640.jpg   640w,
+												./images/catalog/tile-960.jpg   960w,
+												./images/catalog/tile-1280.jpg 1280w,
+												./images/catalog/tile-1920.jpg 1920w
+											"
+											src="./images/catalog/tile-320.jpg"
+											alt="Уложенная на земле плитка перед домом"
+											sizes="(min-width: 768px) 50vw, 100vw" />
+									</picture>
+								</div>
+								<h3 class="catalog__category">Плитка</h3>
+							</a>
                         </li>
                     </ul>
                 </div>
@@ -304,9 +489,10 @@
                 <div class="container">
                     <h2 class="section-title section-title--dark advantages__section-title">
                         <span class="section-title__frame">
-							Чем наши барбекю комплексы
-							<span class="excerpt excerpt--accent">лучше</span>
-						</span>
+                            Чем наши барбекю <br />
+                            комплексы
+                            <span class="excerpt excerpt--accent">лучше</span>
+                        </span>
                     </h2>
                     <!-- List -->
                     <ul class="advantages__list">
@@ -386,7 +572,7 @@
                     <h2 class="section-title section-title--dark gallery__section-title">
                         <span class="section-title__frame">готовые комплексы барбекю</span>
                     </h2>
-					Слайдер...
+                    Слайдер...
                 </div>
             </section>
 
@@ -395,9 +581,10 @@
                 <div class="container">
                     <h2 class="section-title design__section-title">
                         <span class="section-title__frame">
-							Создай <span class="excerpt excerpt--accent">уникальный дизайн</span> своего
-							участка
-						</span>
+                            Создай
+                            <span class="excerpt excerpt--accent">уникальный дизайн</span> своего
+                            участка
+                        </span>
                     </h2>
                     <p class="design__text"></p>
                     <a class="button" href="">пройти тест</a>
@@ -487,7 +674,9 @@
             <section>
                 <div class="container">
                     <h2 class="section-title section-title--dark">
-                        <span class="section-title__frame">Получите примеры комплекса в нужном цвете прямо на WhatsApp!</span>
+                        <span class="section-title__frame"
+                            >Получите примеры комплекса в нужном цвете прямо на WhatsApp!</span
+                        >
                     </h2>
                     <div class="">
                         <img src="./images/form/catalog-book-290.png" alt="Журнал-каталог" />
@@ -515,10 +704,12 @@
                 <div class="container">
                     <h2 class="section-title section-title--light">
                         <span class="section-title__frame">
-							<span class="excerpt excerpt--accent">Акция!</span> <br />
-							при заказе комплекса барбекю -
-							<span class="excerpt excerpt--accent">ваза в цвет комплекса в подарок</span>
-						</span>
+                            <span class="excerpt excerpt--accent">Акция!</span> <br />
+                            при заказе комплекса барбекю -
+                            <span class="excerpt excerpt--accent"
+                                >ваза в цвет комплекса в подарок</span
+                            >
+                        </span>
                     </h2>
                     <ul class="stock__list">
                         <li class="stock__item">
@@ -561,76 +752,73 @@
                     </div>
                 </div>
             </section>
-
         </main>
-		
-		<!--! Footer -->
-		<footer class="page-footer">
-			<div class="container">
-				<!-- Logo -->
-				<a href="" class="logo page-footer__logo">
-					<img src="./images/logo.png" alt="" />
-					Luxbeton
-				</a>
 
-				<!-- Site nav -->
-				<ul class="site-nav">
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Главная</a>
-					</li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Каталог</a>
-					</li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Фотогалерея</a>
-					</li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Акции</a>
-					</li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">О компании</a>
-					</li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Проекты</a>
-					</li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Контакты</a>
-					</li>
-				</ul>
+        <!--! Footer -->
+        <footer class="page-footer">
+            <div class="container">
+                <!-- Logo -->
+                <a href="" class="logo page-footer__logo">
+                    <img src="./images/logo.png" alt="" />
+                    Luxbeton
+                </a>
 
-				<!-- We are online -->
-				<div class="message">
-					<b class="message__action">Мы онлайн, пишите</b>
-					<a class="message__link" href="" aria-label="Whatsapp">
-						<svg class="message__icon">
-							<use
-								href="./images/icons/svg-sprite-optimized.svg#icon-whatsapp"></use>
-						</svg>
-					</a>
-					<a class="message__link" href="" aria-label="Telegram">
-						<svg class="message__icon">
-							<use
-								href="./images/icons/svg-sprite-optimized.svg#icon-telegram"></use>
-						</svg>
-					</a>
-				</div>
+                <!-- Site nav -->
+                <ul class="site-nav">
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Каталог</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Фотогалерея</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Акции</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">О компании</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Проекты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Контакты</a>
+                    </li>
+                </ul>
 
-				<!-- Company Phone number -->
-				<a class="company-phone" href="tel:+380976666622">
-					<svg class="company-phone__icon" width="33" height="33">
-						<use href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
-					</svg>
-					+38 097 - 666 - 66 - 22
-				</a>
+                <!-- We are online -->
+                <div class="message">
+                    <b class="message__action">Мы онлайн, пишите</b>
+                    <a class="message__link" href="" aria-label="Whatsapp">
+                        <svg class="message__icon">
+                            <use href="./images/icons/svg-sprite-optimized.svg#icon-whatsapp"></use>
+                        </svg>
+                    </a>
+                    <a class="message__link" href="" aria-label="Telegram">
+                        <svg class="message__icon">
+                            <use href="./images/icons/svg-sprite-optimized.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
 
-				<div>
-					<a href="">Сделано VTOPESAIT</a>
-					<a href="">Политика конфиденциальности</a>
-					<a href="">Соглашение на обработку персональных данных</a>
-				</div>
-			</div>
-		</footer>
-		
+                <!-- Company Phone number -->
+                <a class="company-phone" href="tel:+380976666622">
+                    <svg class="company-phone__icon" width="33" height="33">
+                        <use href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
+                    </svg>
+                    +38 097 - 666 - 66 - 22
+                </a>
+
+                <div>
+                    <a href="">Сделано VTOPESAIT</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Соглашение на обработку персональных данных</a>
+                </div>
+            </div>
+        </footer>
+
         <script src="./js/menu.js"></script>
     </body>
 </html>

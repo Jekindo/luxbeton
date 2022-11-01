@@ -4,9 +4,24 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
-    @include font(700, 50px);
+    @include font(700, 40px);
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and (min-width: $mobile) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    @media screen and (min-width: $tablet) {
+		display: inline-block;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    @media screen and (min-width: $laptop) {
+        font-size: 45px;
+    }
 
     &--light {
         color: get-color("primary-white");
@@ -51,7 +66,7 @@
             border-bottom: 3px solid get-color("accent");
             border-left: 3px solid get-color("accent");
         }
-		
+
         &::after {
             bottom: 0;
             right: 0;
@@ -60,4 +75,8 @@
             border-right: 3px solid get-color("accent");
         }
     }
+}
+
+.title-wrapper {
+	text-align: center;
 }

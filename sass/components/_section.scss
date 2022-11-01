@@ -1,0 +1,129 @@
+.section {
+
+	// Clouds background
+
+	&--clouds-bg {
+		background-image: image-set(
+				url(../images/common/clouds-top-mobile.png) 1x,
+				url(../images/common/clouds-top-mobile@2x.png) 2x
+			),
+			image-set(
+				url(../images/common/clouds-bottom-mobile.png) 1x,
+				url(../images/common/clouds-bottom-mobile@2x.png) 2x
+			);
+		background-position: top center, bottom center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	
+		@media screen and (min-width: $tablet) {
+			background-image: image-set(
+					url(../images/common/clouds-top-tablet.png) 1x,
+					url(../images/common/clouds-top-desktop.png) 2x
+				),
+				image-set(
+					url(../images/common/clouds-bottom-tablet.png) 1x,
+					url(../images/common/clouds-bottom-desktop.png) 2x
+				);
+		}
+	
+		@media screen and (min-width: $laptop) {
+			background-image: image-set(
+					url(../images/common/clouds-top-desktop.png) 1x,
+					url(../images/common/clouds-top-desktop@2x.png) 2x
+				),
+				image-set(
+					url(../images/common/clouds-bottom-desktop.png) 1x,
+					url(../images/common/clouds-bottom-desktop@2x.png) 2x
+				);
+		}
+	}
+	
+    &--clouds-top-bg {
+        background-image: image-set(
+            url(../images/common/clouds-top-mobile.png) 1x,
+            url(../images/common/clouds-top-mobile@2x.png) 2x
+        );
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+
+        @media screen and (min-width: $tablet) {
+            background-image: image-set(
+                url(../images/common/clouds-top-tablet.png) 1x,
+                url(../images/common/clouds-top-desktop.png) 2x
+            );
+        }
+
+        @media screen and (min-width: $laptop) {
+            background-image: image-set(
+                url(../images/common/clouds-top-desktop.png) 1x,
+                url(../images/common/clouds-top-desktop@2x.png) 2x
+            );
+        }
+    }
+
+    &--clouds-bottom-bg {
+        background-image: image-set(
+            url(../images/common/clouds-bottom-mobile.png) 1x,
+            url(../images/common/clouds-bottom-mobile@2x.png) 2x
+        );
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+
+        @media screen and (min-width: $tablet) {
+            background-image: image-set(
+                url(../images/common/clouds-bottom-tablet.png) 1x,
+                url(../images/common/clouds-bottom-desktop.png) 2x
+            );
+        }
+
+        @media screen and (min-width: $laptop) {
+            background-image: image-set(
+                url(../images/common/clouds-bottom-desktop.png) 1x,
+                url(../images/common/clouds-bottom-desktop@2x.png) 2x
+            );
+        }
+    }
+
+	// Smoke background
+	
+    &--smoke-bg {
+    }
+
+	// Common styles 
+	
+	&--clouds-bg,
+	&--clouds-top-bg,
+	&--clouds-bottom-bg {
+		@media screen and (max-width: 599px) {
+			background-size: 120% auto;
+		}
+	
+		@media screen and (max-width: 499px) {
+			background-size: 150% auto;
+		}
+	
+		@media screen and (max-width: 399px) {
+			background-size: 200% auto;
+		}
+
+		@media screen and (min-width: $desktop) {
+			background-size: 100% 280px;
+		}
+	}
+}
+
+.section__section-title {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 50px;
+    }
+}
+
+.section__container {
+    @media screen and (max-width: 767px) {
+        max-width: $mobile;
+    }
+}

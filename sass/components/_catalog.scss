@@ -1,0 +1,226 @@
+.catalog {
+    outline: 1px solid teal;
+    padding-top: 75px;
+    padding-bottom: 100px;
+
+	@media screen and (min-width: $laptop) {
+        padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: $tablet) {
+		padding-top: 100px;
+        padding-bottom: 165px;
+    }
+
+    @media screen and (min-width: $laptop) {
+		padding-top: 140px;
+        padding-bottom: 230px;
+    }
+
+	@media screen and (min-width: $desktop) {
+        padding-bottom: 300px;
+    }
+
+	
+    &__list {
+        @extend %list;
+
+        @media screen and (min-width: $tablet) {
+            @include flex-grid($grid-gap);
+            row-gap: 45px;
+        }
+    }
+
+    &__category {
+        margin-bottom: 0;
+
+        @include font(700, 20px, 1.07);
+        text-align: center;
+
+        @media screen and (min-width: $mobile) {
+            font-size: 24px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            font-size: 22px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 28px;
+        }
+    }
+
+    &__link {
+        color: currentColor;
+    }
+}
+
+.catalog__item {
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - #{$grid-gap}) / 2);
+    }
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &:first-child {
+        &::before {
+            content: "";
+
+            position: absolute;
+            z-index: -1;
+
+            height: 301px;
+            width: 50%;
+
+            background-image: image-set(
+                url(../images/common/sparks-320.png) 1x,
+                url(../images/common/sparks-640.png) 2x,
+                url(../images/common/sparks-960.png) 3x
+            );
+            background-size: cover;
+            background-position: center;
+
+            @media screen and (max-width: 1329px) {
+                bottom: -100px;
+                left: -20px;
+                transform: rotate(-90deg);
+            }
+
+            @media screen and (min-width: $desktop) {
+                // width: 275px;
+                top: -150px;
+                left: -195px;
+                background-image: image-set(
+                    url(../images/common/sparks-640.png) 1x,
+                    url(../images/common/sparks-960.png) 2x
+                );
+            }
+        }
+    }
+
+    &:nth-child(4n + 1) {
+        .catalog__thumb::before {
+            background: radial-gradient(
+                circle at top left,
+                rgb(255 164 27 / 70%) 0%,
+                rgb(255 206 132 / 10%) 40%
+            );
+
+            @media screen and (min-width: $tablet) {
+                background: radial-gradient(
+                    circle at top left,
+                    rgb(255 164 27 / 100%) 0%,
+                    rgb(255 206 132 / 10%) 40%
+                );
+            }
+        }
+    }
+
+    &:nth-child(4n + 2) {
+        .catalog__thumb::before {
+            background: radial-gradient(
+                circle at bottom right,
+                rgb(255 164 27 / 70%) 0%,
+                rgb(255 206 132 / 10%) 40%
+            );
+            @media screen and (min-width: $tablet) {
+                background: radial-gradient(
+                    circle at bottom right,
+                    rgb(255 164 27 / 100%) 0%,
+                    rgb(255 206 132 / 10%) 40%
+                );
+            }
+        }
+    }
+
+    &:nth-child(4n + 3) {
+        .catalog__thumb::before {
+            background: radial-gradient(
+                circle at bottom left,
+                rgb(255 164 27 / 70%) 0%,
+                rgba(255, 206, 132, 0.1) 40%
+            );
+
+            @media screen and (min-width: $tablet) {
+                background: radial-gradient(
+                    circle at bottom left,
+                    rgb(255 164 27 / 100%) 0%,
+                    rgb(255 206 132 / 10%) 40%
+                );
+            }
+        }
+    }
+
+    &:nth-child(4n + 4) {
+        .catalog__thumb::before {
+            background: radial-gradient(
+                circle at top left,
+                rgb(255 164 27 / 70%) 0%,
+                rgba(255, 206, 132, 0.1) 40%
+            );
+
+            @media screen and (min-width: $tablet) {
+                background: radial-gradient(
+                    circle at top left,
+                    rgb(255 164 27 / 100%) 0%,
+                    rgb(255 206 132 / 10%) 40%
+                );
+            }
+        }
+    }
+}
+
+.catalog__thumb {
+    position: relative;
+
+    margin-bottom: 20px;
+
+    border-radius: $card-mobile-border-radius;
+
+    overflow: hidden;
+
+    transition: transform $transition-duration $ttf, box-shadow $transition-duration $ttf;
+
+    @media screen and (min-width: $tablet) {
+        border-radius: $card-border-radius;
+    }
+
+    .catalog__item:hover & {
+        transform: scale(1.02) translateY(-10px);
+        box-shadow: 0 0 20px 5px get-color("secondary-accent--hover-opacity");
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        // animation: pulse-gradient 2s ease infinite alternate;
+    }
+
+    .catalog__item--accent & {
+        box-shadow: 0 0 20px 5px get-color("secondary-accent--hover-opacity");
+        transform: scale(1.01);
+    }
+}
+
+@keyframes pulse-gradient {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 125%;
+    }
+}
