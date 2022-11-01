@@ -978,16 +978,17 @@ body {
   outline: 1px solid teal;
   padding-top: 75px;
   padding-bottom: 100px;
-}
-@media screen and (min-width: 1024px) {
-  .catalog {
-    padding-bottom: 40px;
-  }
+  background-image: -webkit-image-set(url(../images/catalog/firewood-test.png) 1x, url(../images/catalog/firewood-test@2x.png) 2x);
+  background-image: image-set(url(../images/catalog/firewood-test.png) 1x, url(../images/catalog/firewood-test@2x.png) 2x);
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: bottom 2vh right;
 }
 @media screen and (min-width: 768px) {
   .catalog {
     padding-top: 100px;
     padding-bottom: 165px;
+    background-size: 30% auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -998,7 +999,9 @@ body {
 }
 @media screen and (min-width: 1330px) {
   .catalog {
+    padding-top: 180px;
     padding-bottom: 300px;
+    background-size: 35% auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1016,6 +1019,7 @@ body {
 }
 .catalog__category {
   margin-bottom: 0;
+  text-shadow: -2px -2px 5px #000;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.07;
@@ -1167,31 +1171,50 @@ body {
     background-size: 125%;
   }
 }
-.section--clouds-bg {
-  background-image: -webkit-image-set(url(../images/common/clouds-top-mobile.png) 1x, url(../images/common/clouds-top-mobile@2x.png) 2x), -webkit-image-set(url(../images/common/clouds-bottom-mobile.png) 1x, url(../images/common/clouds-bottom-mobile@2x.png) 2x);
-  background-image: image-set(url(../images/common/clouds-top-mobile.png) 1x, url(../images/common/clouds-top-mobile@2x.png) 2x), image-set(url(../images/common/clouds-bottom-mobile.png) 1x, url(../images/common/clouds-bottom-mobile@2x.png) 2x);
-  background-position: top center, bottom center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.section {
+  position: relative;
+}
+.section--clouds-bg::before {
+  top: 0;
+  left: 0;
+  background-image: -webkit-image-set(url(../images/common/clouds-top-mobile.png) 1x, url(../images/common/clouds-top-mobile@2x.png) 2x);
+  background-image: image-set(url(../images/common/clouds-top-mobile.png) 1x, url(../images/common/clouds-top-mobile@2x.png) 2x);
 }
 @media screen and (min-width: 768px) {
-  .section--clouds-bg {
-    background-image: -webkit-image-set(url(../images/common/clouds-top-tablet.png) 1x, url(../images/common/clouds-top-desktop.png) 2x), -webkit-image-set(url(../images/common/clouds-bottom-tablet.png) 1x, url(../images/common/clouds-bottom-desktop.png) 2x);
-    background-image: image-set(url(../images/common/clouds-top-tablet.png) 1x, url(../images/common/clouds-top-desktop.png) 2x), image-set(url(../images/common/clouds-bottom-tablet.png) 1x, url(../images/common/clouds-bottom-desktop.png) 2x);
+  .section--clouds-bg::before {
+    background-image: -webkit-image-set(url(../images/common/clouds-top-tablet.png) 1x, url(../images/common/clouds-top-desktop.png) 2x);
+    background-image: image-set(url(../images/common/clouds-top-tablet.png) 1x, url(../images/common/clouds-top-desktop.png) 2x);
   }
 }
 @media screen and (min-width: 1024px) {
-  .section--clouds-bg {
-    background-image: -webkit-image-set(url(../images/common/clouds-top-desktop.png) 1x, url(../images/common/clouds-top-desktop@2x.png) 2x), -webkit-image-set(url(../images/common/clouds-bottom-desktop.png) 1x, url(../images/common/clouds-bottom-desktop@2x.png) 2x);
-    background-image: image-set(url(../images/common/clouds-top-desktop.png) 1x, url(../images/common/clouds-top-desktop@2x.png) 2x), image-set(url(../images/common/clouds-bottom-desktop.png) 1x, url(../images/common/clouds-bottom-desktop@2x.png) 2x);
+  .section--clouds-bg::before {
+    background-image: -webkit-image-set(url(../images/common/clouds-top-desktop.png) 1x, url(../images/common/clouds-top-desktop@2x.png) 2x);
+    background-image: image-set(url(../images/common/clouds-top-desktop.png) 1x, url(../images/common/clouds-top-desktop@2x.png) 2x);
+  }
+}
+.section--clouds-bg::after {
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-image-set(url(../images/common/clouds-bottom-mobile.png) 1x, url(../images/common/clouds-bottom-mobile@2x.png) 2x);
+  background-image: image-set(url(../images/common/clouds-bottom-mobile.png) 1x, url(../images/common/clouds-bottom-mobile@2x.png) 2x);
+}
+@media screen and (min-width: 768px) {
+  .section--clouds-bg::after {
+    background-image: -webkit-image-set(url(../images/common/clouds-bottom-tablet.png) 1x, url(../images/common/clouds-bottom-desktop.png) 2x);
+    background-image: image-set(url(../images/common/clouds-bottom-tablet.png) 1x, url(../images/common/clouds-bottom-desktop.png) 2x);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section--clouds-bg::after {
+    background-image: -webkit-image-set(url(../images/common/clouds-bottom-desktop.png) 1x, url(../images/common/clouds-bottom-desktop@2x.png) 2x);
+    background-image: image-set(url(../images/common/clouds-bottom-desktop.png) 1x, url(../images/common/clouds-bottom-desktop@2x.png) 2x);
   }
 }
 .section--clouds-top-bg {
+  top: 0;
+  left: 0;
   background-image: -webkit-image-set(url(../images/common/clouds-top-mobile.png) 1x, url(../images/common/clouds-top-mobile@2x.png) 2x);
   background-image: image-set(url(../images/common/clouds-top-mobile.png) 1x, url(../images/common/clouds-top-mobile@2x.png) 2x);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
 }
 @media screen and (min-width: 768px) {
   .section--clouds-top-bg {
@@ -1206,11 +1229,10 @@ body {
   }
 }
 .section--clouds-bottom-bg {
+  bottom: 0;
+  left: 0;
   background-image: -webkit-image-set(url(../images/common/clouds-bottom-mobile.png) 1x, url(../images/common/clouds-bottom-mobile@2x.png) 2x);
   background-image: image-set(url(../images/common/clouds-bottom-mobile.png) 1x, url(../images/common/clouds-bottom-mobile@2x.png) 2x);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
 }
 @media screen and (min-width: 768px) {
   .section--clouds-bottom-bg {
@@ -1224,24 +1246,39 @@ body {
     background-image: image-set(url(../images/common/clouds-bottom-desktop.png) 1x, url(../images/common/clouds-bottom-desktop@2x.png) 2x);
   }
 }
-@media screen and (max-width: 599px) {
-  .section--clouds-bg, .section--clouds-top-bg, .section--clouds-bottom-bg {
-    background-size: 120% auto;
+.section--clouds-bg::before, .section--clouds-bg::after, .section--clouds-top-bg::before, .section--clouds-top-bg::after, .section--clouds-bottom-bg::before, .section--clouds-bottom-bg::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 480px) {
+  .section--clouds-bg::before, .section--clouds-bg::after, .section--clouds-top-bg::before, .section--clouds-top-bg::after, .section--clouds-bottom-bg::before, .section--clouds-bottom-bg::after {
+    height: 120px;
   }
 }
-@media screen and (max-width: 499px) {
-  .section--clouds-bg, .section--clouds-top-bg, .section--clouds-bottom-bg {
-    background-size: 150% auto;
+@media screen and (min-width: 768px) {
+  .section--clouds-bg::before, .section--clouds-bg::after, .section--clouds-top-bg::before, .section--clouds-top-bg::after, .section--clouds-bottom-bg::before, .section--clouds-bottom-bg::after {
+    height: 150px;
   }
 }
-@media screen and (max-width: 399px) {
-  .section--clouds-bg, .section--clouds-top-bg, .section--clouds-bottom-bg {
-    background-size: 200% auto;
+@media screen and (min-width: 1024px) {
+  .section--clouds-bg::before, .section--clouds-bg::after, .section--clouds-top-bg::before, .section--clouds-top-bg::after, .section--clouds-bottom-bg::before, .section--clouds-bottom-bg::after {
+    height: 200px;
   }
 }
 @media screen and (min-width: 1330px) {
-  .section--clouds-bg, .section--clouds-top-bg, .section--clouds-bottom-bg {
-    background-size: 100% 280px;
+  .section--clouds-bg::before, .section--clouds-top-bg::before, .section--clouds-bottom-bg::before {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 1330px) {
+  .section--clouds-bg::after, .section--clouds-top-bg::after, .section--clouds-bottom-bg::after {
+    height: 290px;
   }
 }
 
