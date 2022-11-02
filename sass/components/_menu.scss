@@ -1,11 +1,11 @@
 .menu-button {
     padding: 0;
 
-    border: none;
+    @extend %no-border;
 
     background-color: transparent;
 
-    @media screen and (min-width: $laptop) {
+    @include for-size(laptop) {
         display: none;
     }
 
@@ -30,7 +30,7 @@
 }
 
 .mobile-menu {
-    @media screen and (max-width: 1023px) {
+    @include for-size(until-laptop) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -56,12 +56,12 @@
         }
     }
 
-    @media screen and (min-width: $laptop) {
+    @include for-size(laptop) {
         @include aligned-flex;
         column-gap: 25px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include for-size(desktop) {
         column-gap: 50px;
     }
 }

@@ -1,23 +1,27 @@
 $colors: (
-	'primary-black': #000,
-	'primary-white': #fff,
-	'page-bg': #232323,
-	'mobile-menu-bg': #151515,
-	'form-bg': #272727,
-	'accent': #ff9900,
-	'secondary-accent':#FF6712,
-	'secondary-accent--hover':#ff5e00,
-	'secondary-accent--hover-opacity':rgb(255 94 0 / 30%),
-	'secondary-accent--card-shadow':rgb(255 94 0 / 60%),
-	'img-bg-gradient': #ffa41b,
+    "primary-black": #000,
+    "primary-white": #fff,
+    "page-bg": #232323,
+    "mobile-menu-bg": #151515,
+    "form-bg": #272727,
+    "accent": #ff9900,
+    "secondary-accent": #ff6712,
+    "secondary-accent--hover": #ff5e00,
+    "secondary-accent--hover-opacity": rgb(255 94 0 / 30%),
+    "secondary-accent--card-shadow": rgb(255 94 0 / 60%),
+    "img-bg-gradient": #ffa41b,
 
-	'button-shadow': rgb(255 145 2 / 0.6),
+    "button-shadow": rgb(255 145 2 / 0.6),
+    "logo-bg": #b0b0b0,
 
-	'logo-bg': #B0B0B0,
-
-	'online': #00B35C,
+    "online": #00b35c,
 );
 
+$card-accent-gradient: linear-gradient(210.26deg, #ffdaa4 34.47%, #ffa722 89%);
+$card-dark-gradient: linear-gradient(90.79deg, #404040 16.59%, #656565 88.75%),
+  					 linear-gradient(260.85deg, #dcdcdc 11.33%, #f3f3f3 93.09%);
+$card-light-gradient: linear-gradient(260.85deg, #dcdcdc 11.33%, #f3f3f3 93.09%),
+    				  linear-gradient(90.79deg, #404040 16.59%, #656565 88.75%);
 
 $mobile: 480px;
 $tablet: 768px;

@@ -1,0 +1,81 @@
+.advantages {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+    background-color: get-color(primary-white);
+
+    &__list {
+        @extend %list;
+        color: get-color("primary-black");
+
+		@include for-size(desktop) {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+    }
+
+	&__item-content {
+		padding: 30px 15px;
+		// padding-bottom: 0;
+	}
+	
+    &__headline {
+        margin-bottom: 7px;
+
+        @include font(700, 18px, 1.27);
+        text-transform: uppercase;
+    }
+
+    &__descr {
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.3;
+    }
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+}
+
+.advantages__item {	
+    border-radius: $card-mobile-border-radius;
+	overflow: hidden;
+
+	@include for-size(desktop) {
+		flex-basis: calc((100% - 2 * 20px) / 3);
+		// flex-basis: auto;
+	}
+
+
+	
+    @include for-size(tablet) {
+        border-radius: $card-border-radius;
+    }
+
+	
+    &:not(:last-child) {
+        @include for-size(mobile-only) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &--accent {
+        background-image: $card-accent-gradient;
+    }
+
+    &--dark {	
+        background-image: $card-dark-gradient;
+        color: get-color("primary-white");
+    }
+
+    &--light {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+        background-image: $card-light-gradient;
+    }
+}

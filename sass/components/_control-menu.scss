@@ -1,7 +1,7 @@
 .control-menu {
     @include centered-flex;
 
-    @media screen and (max-width: 1023px) {
+    @include for-size(until-laptop) {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -18,7 +18,7 @@
         animation: gradient 10s ease infinite;
     }
 
-    @media screen and (min-width: $laptop) {
+	@include for-size(laptop) {
         column-gap: 10px;
     }
 
@@ -54,17 +54,23 @@
         @include font(500, 11px, 0.9);
         text-align: center;
 
-        @media screen and (max-width: 1023px) {
+		&:hover, 
+		&:focus {
+			background-color: get-color('secondary-accent--hover');
+        }
+		
+        @include for-size(until-laptop) {
             background-color: transparent;
         }
 
-        @media screen and (min-width: $laptop) {
+		@include for-size(laptop) {
             flex-basis: calc((100% - 4 * 10px) / 5);
             padding: 15px;
 
             font-size: 12px;
 
-            &:hover {
+            &:hover, 
+            &:focus {
                 box-shadow: 0px 0px 15px get-color("button-shadow");
                 transform: scale(1.02);
             }
@@ -85,10 +91,6 @@
                 margin-bottom: 10px;
             }
         }
-
-        &:hover {
-			background-color: get-color('secondary-accent--hover');
-        }
     }
 
     &__icon {
@@ -100,7 +102,7 @@
 
         transition: transform $transition-duration $ttf, filter $transition-duration $ttf;
 
-        @media screen and (min-width: $laptop) {
+        @include for-size(laptop) {
             margin-bottom: 8px;
         }
 
@@ -114,11 +116,12 @@
     &__button-switch {
         border-radius: 10px;
 
-        @media screen and (max-width: 1023px) {
+        @include for-size(until-desktop) {
             display: none;
         }
 
-        &:hover {
+        &:hover, 
+        &:focus {
             transform: scale(1.1);
             box-shadow: 0 0 24px -2px rgb(255 145 2 / 90%);
         }
