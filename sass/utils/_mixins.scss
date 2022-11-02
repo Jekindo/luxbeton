@@ -18,7 +18,7 @@
 @mixin flex-grid($gap) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: $gap;
+    gap: $gap;
 }
 
 @mixin for-size($range) {
