@@ -8,14 +8,10 @@
     @include font(700, 26px, 1.4);
     text-transform: uppercase;
 
-	@media screen and (min-width: $tablet) {
-		column-gap: 18px;
-	}
-
 	&__image {
 		width: 82px;
 
-		@media screen and (min-width: $tablet) {
+		@include for-size(tablet) {
 			width: 103px;
 		}
 	}

@@ -1,38 +1,38 @@
 .catalog {
-    outline: 1px solid teal;
     padding-top: 75px;
     padding-bottom: 100px;
 
-	background-image: image-set(
-		url(../images/catalog/firewood-test.png) 1x,
-		url(../images/catalog/firewood-test@2x.png) 2x,
-	);
-	background-size: 50% auto;
-	background-repeat: no-repeat;
-	background-position: bottom 2vh right;
+    background-image: image-set(
+        url(../images/catalog/firewood-optimized.png) 1x,
+        url(../images/catalog/firewood-optimized@2x.png) 2x
+    );
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    background-position: bottom 2vh right;
 
-    @media screen and (min-width: $tablet) {
-		padding-top: 100px;
+    @include for-size(tablet) {
+        padding-top: 100px;
         padding-bottom: 165px;
-		background-size: 30% auto;
-    }
-	
-    @media screen and (min-width: $laptop) {
-		padding-top: 140px;
-        padding-bottom: 230px;
+        background-size: 30% auto;
     }
 
-	@media screen and (min-width: $desktop) {
+    @include for-size(laptop) {
+        padding-top: 140px;
+        padding-bottom: 220px;
+		// background-size: 35% auto;
+    }
+
+    @include for-size(desktop) {
         padding-top: 180px;
         padding-bottom: 300px;
-		background-size: 35% auto;
+        background-size: 35% auto;
+		background-position: bottom 5vh right;
     }
 
-	
     &__list {
         @extend %list;
 
-        @media screen and (min-width: $tablet) {
+        @include for-size(tablet) {
             @include flex-grid($grid-gap);
             row-gap: 45px;
         }
@@ -41,20 +41,20 @@
     &__category {
         margin-bottom: 0;
 
-		text-shadow: -2px -2px 5px get-color('primary-black');
+        text-shadow: -2px -2px 5px get-color("primary-black");
 
         @include font(700, 20px, 1.07);
         text-align: center;
 
-        @media screen and (min-width: $mobile) {
+        @include for-size(mobile) {
             font-size: 24px;
         }
 
-        @media screen and (min-width: $tablet) {
+        @include for-size(tablet) {
             font-size: 22px;
         }
 
-        @media screen and (min-width: $desktop) {
+        @include for-size(desktop) {
             font-size: 28px;
         }
     }
@@ -67,12 +67,12 @@
 .catalog__item {
     position: relative;
 
-    @media screen and (min-width: $tablet) {
+    @include for-size(tablet) {
         flex-basis: calc((100% - #{$grid-gap}) / 2);
     }
 
     &:not(:last-child) {
-        @media screen and (max-width: 767px) {
+        @include for-size(mobile-only) {
             margin-bottom: 50px;
         }
     }
@@ -88,30 +88,31 @@
             width: 50%;
 
             background-image: image-set(
-                url(../images/common/sparks-320.png) 1x,
-                url(../images/common/sparks-640.png) 2x,
-                url(../images/common/sparks-960.png) 3x
+                url(../images/common/catalog-sparks.png) 1x,
+                url(../images/common/catalog-sparks@2x.png) 2x,
             );
             background-size: cover;
             background-position: center;
 
-            @media screen and (max-width: 1329px) {
+            // transition: transform $transition-duration $ttf;
+
+            @include for-size(until-desktop) {
                 bottom: -100px;
                 left: -20px;
                 transform: rotate(-90deg);
             }
 
-            @media screen and (min-width: $desktop) {
+			@include for-size(desktop) {
                 // width: 275px;
                 top: -150px;
                 left: -195px;
-                background-image: image-set(
-                    url(../images/common/sparks-640.png) 1x,
-                    url(../images/common/sparks-960.png) 2x
-                );
             }
         }
     }
+
+    // &:hover:first-child::before {
+    //     transform: scale(1.02) translateY(-10px);
+    // }
 
     &:nth-child(4n + 1) {
         .catalog__thumb::before {
@@ -120,14 +121,6 @@
                 rgb(255 164 27 / 70%) 0%,
                 rgb(255 206 132 / 10%) 40%
             );
-
-            @media screen and (min-width: $tablet) {
-                background: radial-gradient(
-                    circle at top left,
-                    rgb(255 164 27 / 100%) 0%,
-                    rgb(255 206 132 / 10%) 40%
-                );
-            }
         }
     }
 
@@ -138,13 +131,6 @@
                 rgb(255 164 27 / 70%) 0%,
                 rgb(255 206 132 / 10%) 40%
             );
-            @media screen and (min-width: $tablet) {
-                background: radial-gradient(
-                    circle at bottom right,
-                    rgb(255 164 27 / 100%) 0%,
-                    rgb(255 206 132 / 10%) 40%
-                );
-            }
         }
     }
 
@@ -155,14 +141,6 @@
                 rgb(255 164 27 / 70%) 0%,
                 rgba(255, 206, 132, 0.1) 40%
             );
-
-            @media screen and (min-width: $tablet) {
-                background: radial-gradient(
-                    circle at bottom left,
-                    rgb(255 164 27 / 100%) 0%,
-                    rgb(255 206 132 / 10%) 40%
-                );
-            }
         }
     }
 
@@ -173,14 +151,6 @@
                 rgb(255 164 27 / 70%) 0%,
                 rgba(255, 206, 132, 0.1) 40%
             );
-
-            @media screen and (min-width: $tablet) {
-                background: radial-gradient(
-                    circle at top left,
-                    rgb(255 164 27 / 100%) 0%,
-                    rgb(255 206 132 / 10%) 40%
-                );
-            }
         }
     }
 }
@@ -196,7 +166,7 @@
 
     transition: transform $transition-duration $ttf, box-shadow $transition-duration $ttf;
 
-    @media screen and (min-width: $tablet) {
+    @include for-size(tablet) {
         border-radius: $card-border-radius;
     }
 
@@ -221,15 +191,5 @@
     .catalog__item--accent & {
         box-shadow: 0 0 20px 5px get-color("secondary-accent--hover-opacity");
         transform: scale(1.01);
-    }
-}
-
-@keyframes pulse-gradient {
-    0% {
-        background-size: 100%;
-    }
-
-    100% {
-        background-size: 125%;
     }
 }

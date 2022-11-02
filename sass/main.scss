@@ -3,21 +3,23 @@
 @import './utils/functions';
 @import './utils/mixins';
 @import './utils/placeholders';
+@import './utils/animation-templates';
 
 // Base
 @import './base/reset';
 @import './base/base';
 
 // Components
-@import './components/logo';
-@import './components/page-header';
-@import './components/menu';
-@import './components/site-nav';
-@import './components/section-title';
-@import './components/excerpt';
-@import './components/hero';
-@import './components/button';
-@import './components/features';
-@import './components/control-menu';
-@import './components/catalog';
 @import './components/section';
+@import './components/section-title';
+@import './components/logo';
+// @import './components/page-header';
+// @import './components/menu';
+// @import './components/site-nav';
+@import './components/excerpt';
+// @import './components/hero';
+@import './components/button';
+// @import './components/features';
+// @import './components/control-menu';
+@import './components/catalog';
+
