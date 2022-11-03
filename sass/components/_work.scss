@@ -4,56 +4,81 @@
     }
 
     &__list {
-        @extend %list;
+        margin: 0;
+        padding: 0;
 
+        counter-reset: ol-numbers;
+        color: get-color("primary-black");
 
-		color: get-color('primary-black');
-
-
-		@include for-size(tablet) {
-			@include flex-grid($grid-gap);
-		}
+        @include for-size(tablet) {
+            @include flex-grid($grid-gap);
+        }
     }
 
     &__item {
-		position: relative;
-		
-		padding-top: 25px;
-		padding-left: 20px;
-		padding-bottom: 25px;
-		
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-bottom: 25px;
+
         border-radius: $card-mobile-border-radius;
+
+        @include for-size(tablet) {
+            flex-basis: calc((100% - #{$grid-gap}) / 2);
+        }
+
+        @include for-size(laptop) {
+            flex-basis: calc((100% - 2 * #{$grid-gap}) / 3);
+        }
 
         &:nth-child(odd) {
             background-image: linear-gradient(275.59deg, #d0d0d0 19.29%, #fefefe 83.47%);
         }
 
         &:nth-child(even) {
-            background-image: linear-gradient(129.09deg, #FFE6BF 20.65%, #FFB951 79.9%);
+            background-image: linear-gradient(129.09deg, #ffe6bf 20.65%, #ffb951 79.9%);
         }
-
+ 		
         &:not(:last-child) {
             @include for-size(mobile-only) {
                 margin-bottom: 15px;
             }
         }
-
-		@include for-size(tablet) {
-			flex-basis: calc((100% - #{$grid-gap}) / 2);
-		}
     }
 
-	&__item-text {	
-		max-width: 160px;
+    &__item-text {
+		// max-width: 180px;
 		
-		font-size: 16px;
-		line-height: 1.3;
-	}
+        font-size: 16px;
+        line-height: 1.3;
 
-	&__image {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translateY(-50%);
-	}
+        &::before {
+            content: counter(ol-numbers);
+
+            display: block;
+
+            counter-increment: ol-numbers;
+
+            @include font(400, 70px, 1.28);
+            font-family: "Open Sans", sans-serif;
+            color: get-color("list-counter");
+        }
+    }
+
+    &__image {
+        align-self: center;
+		flex-shrink: 0;
+		// flex-basis: 200px;
+		// min-width: 180px;
+
+		// position: absolute;
+		// top: 50%;
+		// right: 0;
+		// transform: translateY(-50%);
+    }
 }

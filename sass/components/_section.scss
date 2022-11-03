@@ -191,8 +191,8 @@
     }
 }
 
-// .section__container {
-// 	@include for-size(mobile-only) {
-//         max-width: $mobile;
-//     }
-// }
+.section__container {
+	@include for-size(mobile-only) {
+        max-width: $mobile;
+    }
+}
