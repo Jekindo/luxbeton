@@ -32,6 +32,7 @@
 }
 
 .advantages__item {
+    position: relative;
     border-radius: $card-mobile-border-radius;
     overflow: hidden;
 
@@ -43,6 +44,14 @@
         flex-basis: calc((100% - 2 * #{$grid-gap}) / 3);
         flex-grow: 1;
         // flex-basis: auto;
+
+		&:nth-child(3) {
+			order: 1;
+		}
+	
+		&:nth-child(5) {
+			order: 2;
+		}
     }
 
     &:not(:last-child) {
@@ -60,7 +69,15 @@
     }
 
     &--accent {
+        @include centered-flex($main-axis: space-around);
+        flex-direction: column;
+
         background-image: $card-accent-gradient;
+
+        &:nth-child(even) {
+            background-image: $card-accent-gradient-reversed;
+            flex-direction: column-reverse;
+        }
     }
 
     &--dark {

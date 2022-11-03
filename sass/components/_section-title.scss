@@ -29,6 +29,10 @@
         color: get-color("primary-black");
     }
 
+	&--left-aligned {
+		text-align: left;
+	}
+
     &::before,
     &::after,
     &__frame::before,
