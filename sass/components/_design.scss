@@ -1,19 +1,10 @@
 .design {
     background-color: get-color(primary-white);
-    // background-image: linear-gradient(to right, rgba(22, 22, 22, 0.6), rgba(22, 22, 22, 0.6)),
-    //     image-set(url(../images/design/design-bg.png) 1x, url(../images/design/design-bg@2x.png) 2x);
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-
+	
     @include for-size(laptop) {
 		padding-top: 40px;
 		padding-bottom: 40px;
 		
-        // background-image: image-set(
-        //     url(../images/design/design-bg.png) 1x,
-        //     url(../images/design/design-bg@2x.png) 2x
-        // );
         color: get-color("primary-black");
     }
 
@@ -42,6 +33,7 @@
 		}
 
         @include for-size(laptop) {
+			border-radius: $card-border-radius;
             background-image: image-set(
                 url(../images/design/design-bg.png) 1x,
                 url(../images/design/design-bg@2x.png) 2x

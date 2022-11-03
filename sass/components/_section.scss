@@ -4,6 +4,23 @@
     // Clouds background
 
     &--clouds-bg {
+        padding-top: 75px;
+        padding-bottom: 100px;
+
+		@include for-size(tablet) {
+			padding-top: 100px;
+			padding-bottom: 165px;
+		}
+		
+		@include for-size(laptop) {
+			padding-top: 140px;
+			padding-bottom: 220px;
+		}
+
+		@include for-size(desktop) {
+			padding-top: 180px;
+			padding-bottom: 300px;
+		}
 		
         // Top Cloud
 
@@ -155,9 +172,9 @@
                 height: 200px;
             }
 
-			@include for-size(desktop) {
-				height: 290px;
-			}
+            @include for-size(desktop) {
+                height: 290px;
+            }
         }
     }
 }
