@@ -1,20 +1,29 @@
 .advantages {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    // padding: 20px 0;
 
     background-color: get-color(primary-white);
+
+    @include for-size(tablet) {
+        padding: 50px 0;
+    }
 
     &__list {
         @extend %list;
         color: get-color("primary-black");
 
-        @include for-size(desktop) {
-            @include flex-grid($grid-gap);
-        }
+		@include for-size(tablet) {
+			@include flex-grid($grid-gap);
+		}
+
     }
 
     &__item-content {
-        padding: 30px 15px;
+        padding: 32px 15px;
+
+		@include for-size(laptop) {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
     }
 
     &__headline {
@@ -33,25 +42,31 @@
 
 .advantages__item {
     position: relative;
+
+    // padding: 32px 15px;
+    // padding: 32px 15px 0 15px;
+
     border-radius: $card-mobile-border-radius;
     overflow: hidden;
 
     @include for-size(tablet) {
+		flex-basis: calc((100% - #{$grid-gap}) / 2);
+
+		flex-grow: 1;
+		
         border-radius: $card-border-radius;
     }
 
-    @include for-size(desktop) {
+    @include for-size(laptop) {
         flex-basis: calc((100% - 2 * #{$grid-gap}) / 3);
-        flex-grow: 1;
-        // flex-basis: auto;
 
-		&:nth-child(3) {
-			order: 1;
-		}
-	
-		&:nth-child(5) {
-			order: 2;
-		}
+        &:nth-child(3) {
+            // order: 1;
+        }
+
+        &:nth-child(5) {
+            // order: 2;
+        }
     }
 
     &:not(:last-child) {
@@ -60,10 +75,25 @@
         }
     }
 
-    &--2-col {
-        @include for-size(desktop) {
+
+	&:nth-child(1) {
+		color: red;
+	}
+	
+	
+    &--2-row {
+        @include for-size(tablet) {
             display: flex;
             flex-direction: column;
+            gap: $grid-gap;
+        }
+    }
+	
+    &--2-col {
+        @include for-size(tablet) {
+            display: flex;
+            // flex-direction: column;
+			min-width: 100%;
             gap: $grid-gap;
         }
     }
@@ -83,12 +113,22 @@
     &--dark {
         background-image: $card-dark-gradient;
         color: get-color("primary-white");
+
+        // display: flex;
+        // justify-content: space-between;
+
+        .advantages__image {
+            // position: absolute;
+            // right: 0;
+            // bottom: 0;
+
+            // float: right;
+            margin-left: auto;
+        }
     }
 
     &--light {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include centered-flex($main-axis: space-between);
 
         background-image: $card-light-gradient;
     }

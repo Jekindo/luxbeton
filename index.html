@@ -486,7 +486,7 @@
 
             <!--! Advantages -->
             <section class="advantages section">
-                <div class="container">
+                <div class="container section__container">
                     <div class="title-wrapper">
                         <h2 class="section-title section-title--dark advantages__section-title">
                             <span class="section-title__frame">
@@ -506,12 +506,22 @@
                                     шампурах и различных решетках для рыбы и мяса!
                                 </p>
                             </div>
-                            <img
-                                class="advantages__image"
-                                src="./images/advantages/barbecue-cooking.png"
-                                alt="Угли, дрова и шашлык" />
+                            <picture>
+                                <img
+                                    class="advantages__image"
+                                    srcset="
+                                        ./images/advantages/barbecue-cooking-320.png   320w,
+                                        ./images/advantages/barbecue-cooking-640.png   640w,
+                                        ./images/advantages/barbecue-cooking-960.png   960w,
+                                        ./images/advantages/barbecue-cooking-1280.png 1280w,
+                                        ./images/advantages/barbecue-cooking-1920.png 1920w
+                                    "
+                                    sizes="(min-width: 1330px) 33.3vw, (min-width: 768px) 50vw, 100vw"
+                                    src="./images/advantages/barbecue-cooking-320.png"
+                                    alt="Угли, дрова и шашлык" />
+                            </picture>
                         </div>
-                        <div class="advantages__item advantages__item--2-col">
+                        <div class="advantages__item advantages__item--2-row">
                             <div class="advantages__item advantages__item--dark">
                                 <div class="advantages__item-content">
                                     <h4 class="advantages__headline">Простота сборки</h4>
@@ -544,7 +554,7 @@
                             <div class="advantages__item-content">
                                 <h4 class="advantages__headline">Состав</h4>
                                 <p class="advantages__descr">
-                                    80% это натуральные полудрагоценные горные породы из Уральских
+                                    80% это натуральные полудрагоценные горные породы из Карпатских
                                     гор 20% жаропрочный бетон марки М600, морозостойкость f300
                                 </p>
                             </div>
@@ -553,32 +563,57 @@
                                 src="./images/advantages/mountain.png"
                                 alt="Горы" />
                         </div>
+                        <div class="advantages__item advantages__item--2-col">
+                            <div class="advantages__item advantages__item--accent">
+                                <div class="advantages__item-content">
+                                    <h4 class="advantages__headline">Доставка по всей Украине</h4>
+                                    <p class="advantages__descr">
+                                        Перед отправкой мы подбираем самый выгодный для Вас способ
+                                        доставки, через транспортные компании!
+                                    </p>
+                                </div>
+                                <img
+                                    class="advantages__image"
+                                    src="./images/advantages/truck.png"
+                                    alt="Фура едет по дороге на фоне карты" />
+                            </div>
+                            <div
+                                class="advantages__item advantages__item--dark advantages__item--bg-image">
+                                <div class="advantages__item-content">
+                                    <h4 class="advantages__headline">На большую семью</h4>
+                                    <p class="advantages__descr">
+                                        Даже самый стандартный заказ барбекю зоны, может полностью
+                                        накормить компанию из 10 человек быстро и вкусно!
+                                    </p>
+                                </div>
+                                <img
+                                    class="advantages__image"
+                                    src="./images/advantages/family.png"
+                                    alt="Семья ест за столом" />
+                            </div>
+                        </div>
                         <div class="advantages__item advantages__item--accent">
                             <div class="advantages__item-content">
-                                <h4 class="advantages__headline">Доставка по всей Украине</h4>
+                                <h4 class="advantages__headline">приготовление</h4>
                                 <p class="advantages__descr">
-                                    Перед отправкой мы подбираем самый выгодный для Вас способ
-                                    доставки, через транспортные компании!
+                                    Для топки можно использовать угли и дрова, а также жарить на
+                                    шампурах и различных решетках для рыбы и мяса!
                                 </p>
                             </div>
-                            <img
-                                class="advantages__image"
-                                src="./images/advantages/truck.png"
-                                alt="Фура едет по дороге на фоне карты" />
-                        </div>
-                        <div
-                            class="advantages__item advantages__item--dark advantages__item--bg-image">
-                            <div class="advantages__item-content">
-                                <h4 class="advantages__headline">На большую семью</h4>
-                                <p class="advantages__descr">
-                                    Даже самый стандартный заказ барбекю зоны, может полностью
-                                    накормить компанию из 10 человек быстро и вкусно!
-                                </p>
-                            </div>
-                            <img
-                                class="advantages__image"
-                                src="./images/advantages/family.png"
-                                alt="Семья ест за столом" />
+                            <picture>
+                                <img
+                                    class="advantages__image"
+                                    srcset="
+                                        ./images/advantages/barbecue-cooking-320.png   320w,
+                                        ./images/advantages/barbecue-cooking-640.png   640w,
+                                        ./images/advantages/barbecue-cooking-960.png   960w,
+                                        ./images/advantages/barbecue-cooking-1280.png 1280w,
+                                        ./images/advantages/barbecue-cooking-1920.png 1920w
+                                    "
+                                    sizes="(min-width: 1330px) 33.3vw, (min-width: 768px) 50vw, 100vw"
+                                    src="./images/advantages/barbecue-cooking-320.png"
+                                    alt="Угли, дрова и шашлык" />
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -597,7 +632,7 @@
             <!--! Design -->
             <section class="design section">
                 <div class="container design__inner">
-                    <div class="section-wrapper">
+                    <div class="section__container">
                         <h2
                             class="section-title section-title--left-aligned section__section-title">
                             <span class="section-title__frame">
@@ -607,11 +642,12 @@
                                 своего участка
                             </span>
                         </h2>
+                        <p class="design__text">
+                            Ответьте на вопросы и подберите себе модули барбекю комплекса
+                            индивидуально
+                        </p>
+                        <a class="button" href="">пройти тест</a>
                     </div>
-                    <p class="design__text">
-                        Ответьте на вопросы и подберите себе модули барбекю комплекса индивидуально
-                    </p>
-                    <a class="button" href="">пройти тест</a>
                 </div>
             </section>
 
@@ -625,7 +661,9 @@
                     <p class="work__content">
                         Уже <span class="excerpt excerpt--accent">через 14 дней</span> барбекю
                         комплекс будет у Вас с инструкцией по сборке и
-                        <span class="excerpt excerpt--accent">приятным бонусом</span>
+                        <span class="excerpt excerpt--accent">
+                            <a class="excerpt__link" href="">приятным бонусом</a>
+                        </span>
                     </p>
 
                     <!--Work List -->
@@ -674,8 +712,8 @@
                                         ./images/work/calculator-1280.avif 1280w,
                                         ./images/work/calculator-1920.avif 1920w
                                     "
-                                    type="image/avif" 
-									sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
+                                    type="image/avif"
+                                    sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
                                 <img
                                     class="work__image"
                                     srcset="
@@ -696,7 +734,7 @@
                                 <span class="excerpt excerpt--bold">договор</span> (предоплата от
                                 50%)
                             </p>
-							<picture class="work__image">
+                            <picture class="work__image">
                                 <source
                                     srcset="
                                         ./images/work/contract-320.avif   320w,
@@ -705,8 +743,8 @@
                                         ./images/work/contract-1280.avif 1280w,
                                         ./images/work/contract-1920.avif 1920w
                                     "
-                                    type="image/avif" 
-									sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
+                                    type="image/avif"
+                                    sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
                                 <img
                                     class="work__image"
                                     srcset="
@@ -726,7 +764,7 @@
                                 <span class="excerpt excerpt--bold">Изготавливаем</span> в течение
                                 10-15 рабочих дней
                             </p>
-							<picture class="work__image">
+                            <picture class="work__image">
                                 <source
                                     srcset="
                                         ./images/work/barbecue-complex-320.avif   320w,
@@ -735,8 +773,8 @@
                                         ./images/work/barbecue-complex-1280.avif 1280w,
                                         ./images/work/barbecue-complex-1920.avif 1920w
                                     "
-                                    type="image/avif" 
-									sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
+                                    type="image/avif"
+                                    sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
                                 <img
                                     class="work__image"
                                     srcset="
@@ -756,7 +794,7 @@
                                 Оповещаем Вас о готовности и согласовываем с Вами
                                 <span class="excerpt excerpt--bold">отправку изделий</span>
                             </p>
-							<picture class="work__image">
+                            <picture class="work__image">
                                 <source
                                     srcset="
                                         ./images/work/truck-320.avif   320w,
@@ -765,8 +803,8 @@
                                         ./images/work/truck-1280.avif 1280w,
                                         ./images/work/truck-1920.avif 1920w
                                     "
-                                    type="image/avif" 
-									sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
+                                    type="image/avif"
+                                    sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
                                 <img
                                     class="work__image"
                                     srcset="
@@ -788,7 +826,7 @@
                                     >наслаждайтесь вкусной и полезной едой</span
                                 >
                             </p>
-							<picture class="work__image">
+                            <picture class="work__image">
                                 <source
                                     srcset="
                                         ./images/work/food-320.avif   320w,
@@ -797,8 +835,8 @@
                                         ./images/work/food-1280.avif 1280w,
                                         ./images/work/food-1920.avif 1920w
                                     "
-                                    type="image/avif" 
-									sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
+                                    type="image/avif"
+                                    sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
                                 <img
                                     class="work__image"
                                     srcset="
@@ -813,6 +851,7 @@
                                     sizes="(min-width: 1024px) 10vw, (min-width: 768px) 20vw, 40vw" />
                             </picture>
                         </li>
+                    </ol>
                 </div>
             </section>
 
@@ -834,36 +873,80 @@
                 </div>
             </section> -->
 
-            <section>
-                <div class="container">
-                    <h2 class="section-title section-title--dark">
-                        <span class="section-title__frame"
-                            >Получите примеры комплекса в нужном цвете прямо на WhatsApp!</span
-                        >
+            <!--! Get Example -->
+            <section class="get-example section">
+                <div class="container section__container">
+                    <h2
+                        class="section-title section-title--dark section-title--left-aligned section__section-title">
+                        <span class="section-title__frame">
+                            Получите примеры комплекса в нужном цвете прямо на WhatsApp!
+                        </span>
                     </h2>
-                    <div class="">
-                        <img src="./images/form/catalog-book-290.png" alt="Журнал-каталог" />
-                    </div>
-                    <form name="">
-                        <label>
-                            <input type="content" name="name" autocomplete="name" placeholder=" " />
-                            Имя
-                        </label>
-                        <label>
-                            <input type="tel" name="whatsapp-tel" placeholder=" " />
-                            Номер телефона WhatsApp
-                        </label>
-                        <button class="button" type="submit">прислать примеры комплексов</button>
-                        <p>
-                            Нажимая кнопку “Прислать примеры комплексов”, Вы автоматически
-                            соглашаетесь с Политикой конфиденциальности и обработкой данных
-                        </p>
+
+                    <form
+                        class="get-example-form get-example__get-example-form"
+                        name="get_example"
+                        autocomplete="on">
+                        <div class="get-example-form__inner">
+                            <label class="get-example-form__field">
+                                <input
+                                    class="get-example-form__input"
+                                    type="content"
+                                    name="name"
+                                    autocomplete="name"
+                                    placeholder=" " />
+                                <span class="get-example-form__label">Имя</span>
+                            </label>
+                            <label class="get-example-form__field">
+                                <input
+                                    class="get-example-form__input"
+                                    type="tel"
+                                    name="whatsapp-tel"
+                                    placeholder=" " />
+                                <span class="get-example-form__label">Номер телефона WhatsApp</span>
+                            </label>
+                            <button class="button get-example-form__button" type="submit">
+                                прислать примеры комплексов
+                            </button>
+                            <p class="get-example-form__policy">
+                                Нажимая кнопку “Прислать примеры комплексов”, Вы автоматически
+                                соглашаетесь с
+                                <a class="policy" href="">Политикой конфиденциальности</a> и
+                                обработкой данных
+                            </p>
+                        </div>
+                        <div class="thumb">
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/form/catalog-book-320.avif   320w,
+                                        ./images/form/catalog-book-640.avif   640w,
+                                        ./images/form/catalog-book-960.avif   960w,
+                                        ./images/form/catalog-book-1280.avif 1280w,
+                                        ./images/form/catalog-book-1920.avif 1920w
+                                    "
+                                    sizes="(min-width: 768px) 50vw, 100vw"
+                                    type="image/avif" />
+                                <img
+                                    class="get-example__image"
+                                    srcset="
+                                        ./images/form/catalog-book-320.png   320w,
+                                        ./images/form/catalog-book-640.png   640w,
+                                        ./images/form/catalog-book-960.png   960w,
+                                        ./images/form/catalog-book-1280.png 1280w,
+                                        ./images/form/catalog-book-1920.png 1920w
+                                    "
+                                    src="./images/form/catalog-book-320.png"
+                                    sizes="(min-width: 768px) 50vw, 100vw"
+                                    alt="Журнал-каталог" />
+                            </picture>
+                        </div>
                     </form>
                 </div>
             </section>
 
             <!--! Stock -->
-            <section class="stock">
+            <section class="stock section section--clouds-bg">
                 <div class="container">
                     <h2 class="section-title section-title--light">
                         <span class="section-title__frame">
