@@ -6,6 +6,10 @@
 
     background-color: get-color("primary-white");
 
+	@include for-size(laptop) {
+		padding: 40px 0;
+	}
+	
     &__list {
         @extend %list;
 
